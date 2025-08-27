@@ -1,0 +1,203 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+.header {
+  background: #fff;
+  border-bottom: 1px solid #eaeaea;
+  padding: 1rem 0;
+}
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__link {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+.nav__cta {
+  padding: 0.5rem 1rem;
+  background: #c0392b;
+  color: #fff;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.nav__cta:hover {
+  background: #e74c3c;
+}
+
+/* Hero / Conheça a Chef */
+.chef__photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.section__title {
+  font-size: 2rem;
+  color: #c0392b;
+  margin-bottom: 1rem;
+}
+.section__text, .section__lead {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+  line-height: 1.8;
+}
+.center {
+  text-align: center;
+}
+
+/* Cards */
+.cards, .cards--online {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.card__media img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card__body {
+  padding: 1rem;
+}
+.card__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #c0392b;
+  margin-bottom: 0.5rem;
+}
+.card__text {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+.card__actions .btn {
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Botões */
+.btn {
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.3s;
+  display: inline-block;
+}
+.btn--primary {
+  background: #c0392b;
+  color: #fff;
+}
+.btn--primary:hover {
+  background: #e74c3c;
+}
+.btn--ghost {
+  background: transparent;
+  border: 1px solid #c0392b;
+  color: #c0392b;
+}
+.btn--ghost:hover {
+  background: #c0392b;
+  color: #fff;
+}
+
+/* Cards Online (com imagem clicável) */
+.card--online-single a img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #eaeaea;
+  transition: 0.3s;
+}
+.card--online-single a img:hover {
+  transform: scale(1.03);
+}
+
+/* Formulário de Contato */
+.form {
+  margin-top: 2rem;
+}
+.form__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.form__row input {
+  flex: 1;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+.form button {
+  margin-top: 0.5rem;
+}
+
+/* Rodapé */
+.footer {
+  background: #f7f7f7;
+  padding: 2rem 0;
+  text-align: center;
+  color: #555;
+}
+.footer__social a {
+  color: #c0392b;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+.footer__social a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form__row {
+    flex-direction: column;
+  }
+}
